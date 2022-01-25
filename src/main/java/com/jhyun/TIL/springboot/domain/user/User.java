@@ -10,38 +10,28 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity
-public class User {
+public class User extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(nullable = false)
-    private String name;
+    private String userId;
     @Column(nullable = false)
-    private String email;
-    @Column
-    private String picture;
-    @Enumerated(EnumType.STRING)
+    private String userPassword;
     @Column(nullable = false)
-    private Role role;
+    private String userName;
 
     @Builder
-    public User(String name, String email, String picture, Role role){
-        this.name = name;
-        this.email = email;
-        this.picture = picture;
-        this.role = role;
+    public User(String userId, String userPassword, String userName){
+        this.userId = userId;
+        this.userPassword = userPassword;
+        this.userName = userName;
     }
 
-    public User update(String name, String picture){
-        this.name = name;
-        this.picture = picture;
-
+    public User update(String userPassword, String userName){
+        this.userPassword = userPassword;
+        this.userName = userName;
         return this;
     }
-
-    public String getRoleKey() {
-        return this.role.getKey();
-    }
-
 }
