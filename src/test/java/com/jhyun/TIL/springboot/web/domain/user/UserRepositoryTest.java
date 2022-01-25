@@ -7,6 +7,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 
@@ -16,6 +17,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
+@TestPropertySource("classpath:application-test.properties")
 public class UserRepositoryTest {
 
     @Autowired
@@ -28,11 +30,11 @@ public class UserRepositoryTest {
 
     @Test
     public void 회원가입(){
-        //given
+        //givenㄲ
         String userId = "test";
         String userPassword = "0123456789";
         String userName = "재현";
-
+ㄲ
         userRepository.save(User.builder()
                 .userId(userId)
                 .userPassword(userPassword)

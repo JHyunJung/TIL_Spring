@@ -1,8 +1,10 @@
 .idea
 .gradle
 build
+out
 gradle
 gradlew
 gradlew.bat
 settings.gradle
+application.properties
 application-oauth.properties
