@@ -2,6 +2,7 @@ package com.jhyun.TIL.springboot.web.domain.user;
 
 import com.jhyun.TIL.springboot.domain.user.User;
 import com.jhyun.TIL.springboot.domain.user.UserRepository;
+import org.junit.Test;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -34,7 +35,7 @@ public class UserRepositoryTest {
         String userId = "test";
         String userPassword = "0123456789";
         String userName = "재현";
-ㄲ
+
         userRepository.save(User.builder()
                 .userId(userId)
                 .userPassword(userPassword)

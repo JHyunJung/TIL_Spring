@@ -6,9 +6,7 @@ import com.jhyun.TIL.springboot.domain.posts.PostsRepository;
 import com.jhyun.TIL.springboot.web.dto.posts.PostsSaveRequestDto;
 import com.jhyun.TIL.springboot.web.dto.posts.PostsUpdateRequestDto;
 import org.junit.After;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.runner.RunWith;
+import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
@@ -24,7 +22,7 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@ExtendWith(SpringExtension.class)
+
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class PostsApiControllerTest {
 
